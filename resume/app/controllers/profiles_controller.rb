@@ -1,15 +1,21 @@
 class ProfilesController < ApplicationController
-  
+
   def index
+
   end
 
   def show
+    @profile = Profile.find(params[:id])
   end
 
   def new
   end
 
   def create
+    @profile = Profile.new(profile_params)
+    @profile.save
+
+    redirect_to @profile
   end
 
   def edit
@@ -23,10 +29,8 @@ class ProfilesController < ApplicationController
 
   private
 
-  def find_education
-  end
-
-  def education_params
+  def profile_params
+    params.require(:profile).permit(:firstname, :lastname, :role, :phonenumber, :email, :linkedin, :website)
   end
 
 end

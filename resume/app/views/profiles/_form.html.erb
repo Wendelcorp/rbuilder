@@ -1,0 +1,34 @@
+<h2>Profile</h2>
+
+<%= form_for :profile, url: profiles_path do |f| %>
+<p>
+  <%= f.label :firstname %>
+  <%= f.text_field :firstname %>
+</p>
+<p>
+  <%= f.label :lastname %>
+  <%= f.text_field :lastname %>
+</p>
+<p>
+  <%= f.label :role %>
+  <%= f.text_field :role %>
+</p>
+<p>
+  <%= f.label :phonenumber %>
+  <%= f.text_field :phonenumber %>
+</p>
+<p>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+</p>
+<p>
+  <%= f.label :linkedin %>
+  <%= f.text_field :linkedin %>
+</p>
+<p>
+  <%= f.label :website %>
+  <%= f.text_field :website %>
+</p>
+<%= f.submit %>
+</p>
+<% end %>
