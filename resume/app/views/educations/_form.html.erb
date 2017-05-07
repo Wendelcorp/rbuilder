@@ -1,0 +1,22 @@
+<h2>Education</h2>
+
+<%= form_for :education, url: educations_path do |f| %>
+<p>
+  <%= f.label :program %>
+  <%= f.text_field :program %>
+</p>
+<p>
+  <%= f.label :institution %>
+  <%= f.text_field :institution %>
+</p>
+<p>
+  <%= f.label :startdate %>
+  <%= f.date_field :startdate %>
+</p>
+<p>
+  <%= f.label :enddate %>
+  <%= f.date_field :enddate %>
+</p>
+<%= f.submit %>
+</p>
+<% end %>

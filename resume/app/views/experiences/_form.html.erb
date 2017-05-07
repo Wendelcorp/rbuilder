@@ -1,0 +1,26 @@
+<h2>Experience</h2>
+
+<%= form_for :experience, url: experiences_path do |f| %>
+<p>
+  <%= f.label :role %>
+  <%= f.text_field :role %>
+</p>
+<p>
+  <%= f.label :company %>
+  <%= f.text_field :company %>
+</p>
+<p>
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+</p>
+<p>
+  <%= f.label :stardate %>
+  <%= f.date_field :stardate %>
+</p>
+<p>
+  <%= f.label :enddate %>
+  <%= f.date_field :enddate %>
+</p>
+<%= f.submit %>
+</p>
+<% end %>

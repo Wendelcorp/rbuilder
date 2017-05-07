@@ -1,0 +1,12 @@
+<h2>Skills</h2>
+
+<%= form_for :skill, url: skills_path do |f| %>
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</p>
+<p>
+<%= f.submit %>
+</p>
+
+<% end %>

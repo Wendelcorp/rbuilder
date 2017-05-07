@@ -4,12 +4,17 @@ class ExperiencesController < ApplicationController
   end
 
   def show
+    @experience = Experience.find(params[:id])
   end
 
   def new
   end
 
   def create
+    @experience = Experience.new(experience_params)
+    @experience.save
+
+    redirect_to @experience
   end
 
   def edit
@@ -23,10 +28,9 @@ class ExperiencesController < ApplicationController
 
   private
 
-  def find_education
+  def experience_params
+    params.require(:experience).permit(:role, :company, :description, :startdate, :enddate)
   end
 
-  def education_params
-  end
 
 end

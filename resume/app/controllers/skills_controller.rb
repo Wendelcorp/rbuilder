@@ -4,12 +4,17 @@ class SkillsController < ApplicationController
   end
 
   def show
+    @skill = Skill.find(params[:id])
   end
 
   def new
   end
 
   def create
+    @skill = Skill.new(skill_params)
+    @skill.save
+
+    redirect_to @skill
   end
 
   def edit
@@ -23,10 +28,8 @@ class SkillsController < ApplicationController
 
   private
 
-  def find_education
-  end
-
-  def education_params
+  def skill_params
+    params.require(:skill).permit(:name)
   end
 
 end
