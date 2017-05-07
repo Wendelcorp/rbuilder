@@ -18,9 +18,16 @@ class EducationsController < ApplicationController
   end
 
   def edit
+    @education = Education.find(params[:id])
   end
 
   def update
+    @education = Education.find(params[:id])
+    if @education.update(params[:education].permit(:program, :institution, :startdate, :enddate))
+      redirect_to @education
+    else
+      render 'edit'
+    end
   end
 
   def destroy

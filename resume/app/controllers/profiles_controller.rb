@@ -1,7 +1,6 @@
 class ProfilesController < ApplicationController
 
   def index
-
   end
 
   def show
@@ -19,9 +18,16 @@ class ProfilesController < ApplicationController
   end
 
   def edit
+    @profile = Profile.find(params[:id])
   end
 
   def update
+    @profile = Profile.find(params[:id])
+    if @profile.update(params[:profile].permit(:firstname, :lastname, :role, :phonenumber, :email, :linkedin, :website))
+      redirect_to @profile
+    else
+      render 'edit'
+    end
   end
 
   def destroy

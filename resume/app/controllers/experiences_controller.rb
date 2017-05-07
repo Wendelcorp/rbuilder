@@ -18,9 +18,16 @@ class ExperiencesController < ApplicationController
   end
 
   def edit
+    @experience = Experience.find(params[:id])
   end
 
   def update
+    @experience = Experience.find(params[:id])
+    if @experience.update(params[:experience].permit(:role, :company, :description, :startdate, :enddate))
+      redirect_to @experience
+    else
+      render 'edit'
+    end
   end
 
   def destroy
