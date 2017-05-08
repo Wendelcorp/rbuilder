@@ -18,7 +18,10 @@ Rails.application.routes.draw do
   get 'profiles/populate_content'
   get 'editor/index'
 
+  authenticated :user do
+	  root "editor#index", as: "authenticated_root"
+	end
   # root 'welcome#index'
-    root 'editor#index'
+    root 'welcome#index'
 
 end

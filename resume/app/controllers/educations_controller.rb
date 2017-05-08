@@ -1,11 +1,13 @@
 class EducationsController < ApplicationController
-
-  def index
-    @educations = current_user.educations
-  end
+    before_action :authenticate_user!
 
   def show
     @education = current_user.educations.find(params[:id])
+    unless session[:user_id] == @education.user_id
+      flash[:notice] = "Oops! That's someone elses page."
+      redirect_to editor_index_path(session[:user_id])
+      return
+    end
   end
 
   def new

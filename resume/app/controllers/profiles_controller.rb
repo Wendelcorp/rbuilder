@@ -1,11 +1,13 @@
 class ProfilesController < ApplicationController
   before_action :authenticate_user!
 
-  def index
-  end
-
   def show
     @profile = Profile.find(params[:id])
+    unless session[:user_id] == @profile.user_id
+      flash[:notice] = "Oops! That's someone elses page."
+      redirect_to editor_index_path(session[:user_id])
+      return
+    end
   end
 
   def new

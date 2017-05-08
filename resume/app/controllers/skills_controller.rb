@@ -1,11 +1,13 @@
 class SkillsController < ApplicationController
-
-  def index
-    @skills = current_user.skills
-  end
+  before_action :authenticate_user!
 
   def show
     @skill = current_user.skills.find(params[:id])
+    unless session[:user_id] == @skill.user_id
+      flash[:notice] = "Oops! That's someone elses page."
+      redirect_to editor_index_path(session[:user_id])
+      return
+    end
   end
 
   def new
