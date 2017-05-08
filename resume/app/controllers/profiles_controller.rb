@@ -1,4 +1,5 @@
 class ProfilesController < ApplicationController
+  before_action :authenticate_user!
 
   def index
   end
@@ -8,21 +9,22 @@ class ProfilesController < ApplicationController
   end
 
   def new
+    @profile = current_user.profiles.build
   end
 
   def create
-    @profile = Profile.new(profile_params)
+    @profile = current_user.profiles.build(profile_params)
     @profile.save
 
     redirect_to @profile
   end
 
   def edit
-    @profile = Profile.find(params[:id])
+    @profile = current_user.profiles.find(params[:id])
   end
 
   def update
-    @profile = Profile.find(params[:id])
+    @profile = current_user.profiles.find(params[:id])
     if @profile.update(params[:profile].permit(:firstname, :lastname, :role, :phonenumber, :email, :linkedin, :website))
       redirect_to @profile
     else

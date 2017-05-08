@@ -1,28 +1,30 @@
 class SkillsController < ApplicationController
 
   def index
+    @skills = current_user.skills
   end
 
   def show
-    @skill = Skill.find(params[:id])
+    @skill = current_user.skills.find(params[:id])
   end
 
   def new
+    @skill = current_user.skills.build
   end
 
   def create
-    @skill = Skill.new(skill_params)
+    @skill = current_user.skills.build(skill_params)
     @skill.save
 
     redirect_to @skill
   end
 
   def edit
-    @skill = Skill.find(params[:id])
+    @skill = current_user.skills.find(params[:id])
   end
 
   def update
-    @skill = Skill.find(params[:id])
+    @skill = current_user.skills.find(params[:id])
     if @skill.update(params[:skill].permit(:name))
       redirect_to @skill
     else

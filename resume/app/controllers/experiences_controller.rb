@@ -1,28 +1,30 @@
 class ExperiencesController < ApplicationController
 
   def index
+    @experiences = current_user.experiences
   end
 
   def show
-    @experience = Experience.find(params[:id])
+    @experience = current_user.experience.find(params[:id])
   end
 
   def new
+    @experience = current_user.experience.build
   end
 
   def create
-    @experience = Experience.new(experience_params)
+    @experience = current_user.experience.build(experience_params)
     @experience.save
 
     redirect_to @experience
   end
 
   def edit
-    @experience = Experience.find(params[:id])
+    @experience = current_user.experience.find(params[:id])
   end
 
   def update
-    @experience = Experience.find(params[:id])
+    @experience = current_user.experience.find(params[:id])
     if @experience.update(params[:experience].permit(:role, :company, :description, :startdate, :enddate))
       redirect_to @experience
     else

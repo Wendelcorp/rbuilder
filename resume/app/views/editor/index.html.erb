@@ -1,5 +1,9 @@
 <h1>Your Profile</h1>
 
+<%= link_to "Add Profile", new_profile_path(current_user)  %>
+
+<%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
+
 <p>
   <%= @profile.first.firstname %>
 </p>
@@ -56,6 +60,8 @@
 
 <h1>Your Experience</h1>
 
+<h3>Job 1</h3>
+
 <p>
   <%= @experience.first.role %>
 </p>
@@ -72,6 +78,42 @@
   <%= @experience.first.enddate %>
 </p>
 
+<h3>Job 2</h3>
+
+<p>
+  <%= @experience.second.role %>
+</p>
+<p>
+  <%= @experience.second.company %>
+</p>
+<p>
+  <%= @experience.second.description %>
+</p>
+<p>
+  <%= @experience.second.startdate %>
+</p>
+<p>
+  <%= @experience.second.enddate %>
+</p>
+
+<h3>Job 3</h3>
+
+<p>
+  <%= @experience.third.role %>
+</p>
+<p>
+  <%= @experience.third.company %>
+</p>
+<p>
+  <%= @experience.third.description %>
+</p>
+<p>
+  <%= @experience.third.startdate %>
+</p>
+<p>
+  <%= @experience.third.enddate %>
+</p>
+
 <h1>Your Skills</h1>
 
 <p>
@@ -82,7 +124,4 @@
 </p>
 <p>
   <%= @skill.third.name %>
-</p>
-<p>
-  <%= @skill.fourth.name %>
 </p>
