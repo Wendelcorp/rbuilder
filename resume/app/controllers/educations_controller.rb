@@ -24,10 +24,15 @@ class EducationsController < ApplicationController
 
   def update
     @education = current_user.educations.find(params[:id])
-    if @education.update(params[:education].permit(:program, :institution, :startdate, :enddate))
-      redirect_to education_url(@education.user_id)
-    else
-      render 'edit'
+
+    respond_to do |format|
+      if @education.update_attributes(params[:education].permit(:program, :institution, :startdate, :enddate))
+        format.html { redirect_to(@education, :notice => 'Updated :)') }
+        format.json { respond_with_bip(@education) }
+      else
+        format.html { render :action => "edit" }
+        format.json { respond_with_bip(@education) }
+      end
     end
   end
 

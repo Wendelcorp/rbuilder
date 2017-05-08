@@ -25,10 +25,15 @@ class ExperiencesController < ApplicationController
 
   def update
     @experience = current_user.experience.find(params[:id])
-    if @experience.update(params[:experience].permit(:role, :company, :description, :startdate, :enddate))
-      redirect_to @experience
-    else
-      render 'edit'
+
+    respond_to do |format|
+      if @experience.update_attributes(params[:experience].permit(:role, :company, :description, :startdate, :enddate))
+        format.html { redirect_to(@experience, :notice => 'Updated :)') }
+        format.json { respond_with_bip(@experience) }
+      else
+        format.html { render :action => "edit" }
+        format.json { respond_with_bip(@experience) }
+      end
     end
   end
 

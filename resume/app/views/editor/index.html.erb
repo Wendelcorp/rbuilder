@@ -5,25 +5,25 @@
 <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
 
 <p>
-  <%= @profile.first.firstname %>
+  <%= best_in_place @profile.first, :firstname %>
 </p>
 <p>
-  <%= @profile.first.lastname %>
+  <%= best_in_place @profile.first, :lastname %>
 </p>
 <p>
-  <%= @profile.first.role %>
+  <%= best_in_place @profile.first, :role %>
 </p>
 <p>
-  <%= @profile.first.phonenumber %>
+  <%= best_in_place @profile.first, :phonenumber %>
 </p>
 <p>
-  <%= @profile.first.email %>
+  <%= best_in_place @profile.first, :email %>
 </p>
 <p>
-  <%= @profile.first.linkedin %>
+  <%= best_in_place @profile.first, :linkedin %>
 </p>
 <p>
-  <%= @profile.first.website %>
+  <%= best_in_place @profile.first, :website %>
 </p>
 
 <h1>Your Education</h1>
@@ -31,31 +31,31 @@
 <h3>School 1</h3>
 
 <p>
-  <%= @education.first.program %>
+  <%= best_in_place @education.first, :program %>
 </p>
 <p>
-  <%= @education.first.institution %>
+  <%= best_in_place @education.first, :institution %>
 </p>
 <p>
-  <%= @education.first.startdate %>
+  <%= best_in_place @education.first, :startdate %>
 </p>
 <p>
-  <%= @education.first.enddate %>
+  <%= best_in_place @education.first, :enddate %>
 </p>
 
 <h3>School 2</h3>
 
 <p>
-  <%= @education.second.program %>
+  <%= best_in_place @education.second, :program %>
 </p>
 <p>
-  <%= @education.second.institution %>
+  <%= best_in_place @education.second, :institution %>
 </p>
 <p>
-  <%= @education.second.startdate %>
+  <%= best_in_place @education.second, :startdate %>
 </p>
 <p>
-  <%= @education.second.enddate %>
+  <%= best_in_place @education.second, :enddate %>
 </p>
 
 <h1>Your Experience</h1>
@@ -63,65 +63,65 @@
 <h3>Job 1</h3>
 
 <p>
-  <%= @experience.first.role %>
+  <%= best_in_place @experience.first, :role %>
 </p>
 <p>
-  <%= @experience.first.company %>
+  <%= best_in_place @experience.first, :company %>
 </p>
 <p>
-  <%= @experience.first.description %>
+  <%= best_in_place @experience.first, :description %>
 </p>
 <p>
-  <%= @experience.first.startdate %>
+  <%= best_in_place @experience.first, :startdate %>
 </p>
 <p>
-  <%= @experience.first.enddate %>
+  <%= best_in_place @experience.first, :enddate %>
 </p>
 
 <h3>Job 2</h3>
 
 <p>
-  <%= @experience.second.role %>
+  <%= best_in_place @experience.second, :role %>
 </p>
 <p>
-  <%= @experience.second.company %>
+  <%= best_in_place @experience.second, :company %>
 </p>
 <p>
-  <%= @experience.second.description %>
+  <%= best_in_place @experience.second, :description %>
 </p>
 <p>
-  <%= @experience.second.startdate %>
+  <%= best_in_place @experience.second, :startdate %>
 </p>
 <p>
-  <%= @experience.second.enddate %>
+  <%= best_in_place @experience.second, :enddate %>
 </p>
 
 <h3>Job 3</h3>
 
 <p>
-  <%= @experience.third.role %>
+  <%= best_in_place @experience.third, :role %>
 </p>
 <p>
-  <%= @experience.third.company %>
+  <%= best_in_place @experience.third, :company %>
 </p>
 <p>
-  <%= @experience.third.description %>
+  <%= best_in_place @experience.third, :description %>
 </p>
 <p>
-  <%= @experience.third.startdate %>
+  <%= best_in_place @experience.third, :startdate %>
 </p>
 <p>
-  <%= @experience.third.enddate %>
+  <%= best_in_place @experience.third, :enddate %>
 </p>
 
 <h1>Your Skills</h1>
 
 <p>
-  <%= @skill.first.name %>
+  <%= best_in_place @skill.first, :name %>
 </p>
 <p>
-  <%= @skill.second.name %>
+  <%= best_in_place @skill.second, :name %>
 </p>
 <p>
-  <%= @skill.third.name %>
+  <%= best_in_place @skill.third, :name %>
 </p>

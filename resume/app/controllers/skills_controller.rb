@@ -25,10 +25,15 @@ class SkillsController < ApplicationController
 
   def update
     @skill = current_user.skills.find(params[:id])
-    if @skill.update(params[:skill].permit(:name))
-      redirect_to @skill
-    else
-      render 'edit'
+
+    respond_to do |format|
+      if @skill.update_attributes(params[:skill].permit(:name))
+        format.html { redirect_to(@skill, :notice => 'Updated :)') }
+        format.json { respond_with_bip(@skill) }
+      else
+        format.html { render :action => "edit" }
+        format.json { respond_with_bip(@skill) }
+      end
     end
   end
 

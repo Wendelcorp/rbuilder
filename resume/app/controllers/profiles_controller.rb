@@ -25,10 +25,15 @@ class ProfilesController < ApplicationController
 
   def update
     @profile = current_user.profiles.find(params[:id])
-    if @profile.update(params[:profile].permit(:firstname, :lastname, :role, :phonenumber, :email, :linkedin, :website))
-      redirect_to @profile
-    else
-      render 'edit'
+
+    respond_to do |format|
+      if @profile.update_attributes(params[:profile].permit(:firstname, :lastname, :role, :phonenumber, :email, :linkedin, :website))
+        format.html { redirect_to(@profile, :notice => 'Updated :)') }
+        format.json { respond_with_bip(@profile) }
+      else
+        format.html { render :action => "edit" }
+        format.json { respond_with_bip(@profile) }
+      end
     end
   end
 
