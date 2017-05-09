@@ -1,5 +1,6 @@
 <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %> <br>
-<h1>Your Profile</h1>
+
+ <h1>Your Profile</h1>
 
 <p>
   <%= best_in_place @profile.first, :firstname %>

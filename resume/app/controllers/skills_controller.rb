@@ -5,7 +5,7 @@ class SkillsController < ApplicationController
     @skill = current_user.skills.find(params[:id])
     unless session[:user_id] == @skill.user_id
       flash[:notice] = "Oops! That's someone elses page."
-      redirect_to editor_index_path(session[:user_id])
+      redirect_to editor_show_path(session[:user_id])
       return
     end
   end

@@ -3,9 +3,19 @@ class EducationsController < ApplicationController
 
   def show
     @education = current_user.educations.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: "Resume",
+        template: "editor/resume.pdf.erb",
+        locals: {
+          @education => current_user.educations
+        }
+      end
+    end
     unless session[:user_id] == @education.user_id
       flash[:notice] = "Oops! That's someone elses page."
-      redirect_to editor_index_path(session[:user_id])
+      redirect_to editor_show_path(session[:user_id])
       return
     end
   end

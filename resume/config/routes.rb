@@ -15,11 +15,10 @@ Rails.application.routes.draw do
   end
 
   get 'welcome/index'
-  get 'profiles/populate_content'
-  get 'editor/index'
+  get 'editor/show'
 
   authenticated :user do
-	  root "editor#index", as: "authenticated_root"
+	  root "editor#show", as: "authenticated_root"
 	end
   # root 'welcome#index'
     root 'welcome#index'

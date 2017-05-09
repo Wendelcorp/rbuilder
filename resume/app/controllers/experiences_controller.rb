@@ -5,7 +5,7 @@ class ExperiencesController < ApplicationController
     @experience = Experience.find(params[:id])
     unless session[:user_id] == @experience.user_id
       flash[:notice] = "Oops! That's someone elses page."
-      redirect_to editor_index_path(session[:user_id])
+      redirect_to editor_show_path(session[:user_id])
       return
     end
   end
