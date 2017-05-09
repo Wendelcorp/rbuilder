@@ -1,3 +1,35 @@
 // Place all the styles related to the Editor controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  max-width: 48em;
+}
+.resume-canvas {
+  background-color: white;
+  -webkit-box-shadow: 0px 10px 55px -5px rgba(0,0,0,0.42);
+  -moz-box-shadow: 0px 10px 55px -5px rgba(0,0,0,0.42);
+  box-shadow: 0px 10px 55px -5px rgba(0,0,0,0.42);
+  padding: 15px 50px;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+h2 {
+  font-size: 0.8em;
+  color: #d62fba;
+}
+
+h3 {
+  font-size: 0.8em;
+  color: dark-grey;
+}
+
+.education-skills-container {
+  float: right;
+  width: 38%;
+}
+.experience-container {
+  float: left;
+  width: 60%;
+}
