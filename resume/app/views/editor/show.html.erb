@@ -30,9 +30,7 @@
 <p>
   <strong><%= best_in_place @experience.first, :role %></strong> <br>
   <%= best_in_place @experience.first, :company %> <br>
-  <%= best_in_place @experience.first,
-    :description,
-    :type => :textarea %> <br>
+  <%= best_in_place @experience.first, :description, :type => :textarea, :as => :textarea %> <br>
   <%= best_in_place @experience.first, :startdate %> -
   <%= best_in_place @experience.first, :enddate %>
 </p>
@@ -40,7 +38,7 @@
 <p>
   <strong><%= best_in_place @experience.second, :role %></strong> <br>
   <%= best_in_place @experience.second, :company %> <br>
-  <%= best_in_place @experience.second, :description %> <br>
+  <%= best_in_place @experience.second, :description, :type => :textarea, :as => :textarea %> <br>
   <%= best_in_place @experience.second, :startdate %> -
   <%= best_in_place @experience.second, :enddate %>
 </p>
@@ -48,7 +46,7 @@
 <p>
   <strong><%= best_in_place @experience.third, :role %></strong> <br>
   <%= best_in_place @experience.third, :company %> <br>
-  <%= best_in_place @experience.third, :description %> <br>
+  <%= best_in_place @experience.third, :description, :type => :textarea, :as => :textarea %> <br>
   <%= best_in_place @experience.third, :startdate %> -
   <%= best_in_place @experience.third, :enddate %>
 </p>
