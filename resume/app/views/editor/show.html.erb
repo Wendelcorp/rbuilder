@@ -5,46 +5,46 @@
 
 
 <div class="profile-container">
-<p>
-  <%= best_in_place @profile.first, :firstname %> <%= best_in_place @profile.first, :lastname %> <br>
-  <%= best_in_place @profile.first, :role %> <br>
-  <%= best_in_place @profile.first, :phonenumber %> <br>
-  <%= best_in_place @profile.first, :email %> <br>
-  <%= best_in_place @profile.first, :linkedin %> <br>
-  <%= best_in_place @profile.first, :website %>
-</p>
+  <div class="row">
+    <p>
+      <div class="col-md-6">
+      <strong><%= best_in_place @profile.first, :firstname %> <%= best_in_place @profile.first, :lastname %></strong> <br>
+      <%= best_in_place @profile.first, :role %> <br>
+      </div>
+      <div class="col-md-6 text-right">
+      <%= best_in_place @profile.first, :phonenumber %> <br>
+      <%= best_in_place @profile.first, :email %> <br>
+      <!-- <%= best_in_place @profile.first, :linkedin %> <br> -->
+      <!-- <%= best_in_place @profile.first, :website %> -->
+      </div>
+    </p>
+  </div>
 </div>
 
-<div class="row">
+<div class="row main-content">
 
 <div class="experience-container col-md-8">
 
 <h2>Experience</h2>
 
-<h3>Job 1</h3>
-
 <p>
-  <%= best_in_place @experience.first, :role %> <br>
+  <strong><%= best_in_place @experience.first, :role %></strong> <br>
   <%= best_in_place @experience.first, :company %> <br>
   <%= best_in_place @experience.first, :description %> <br>
   <%= best_in_place @experience.first, :startdate %> -
   <%= best_in_place @experience.first, :enddate %>
 </p>
 
-<h3>Job 2</h3>
-
 <p>
-  <%= best_in_place @experience.second, :role %> <br>
+  <strong><%= best_in_place @experience.second, :role %></strong> <br>
   <%= best_in_place @experience.second, :company %> <br>
   <%= best_in_place @experience.second, :description %> <br>
   <%= best_in_place @experience.second, :startdate %> -
   <%= best_in_place @experience.second, :enddate %>
 </p>
 
-<h3>Job 3</h3>
-
 <p>
-  <%= best_in_place @experience.third, :role %> <br>
+  <strong><%= best_in_place @experience.third, :role %></strong> <br>
   <%= best_in_place @experience.third, :company %> <br>
   <%= best_in_place @experience.third, :description %> <br>
   <%= best_in_place @experience.third, :startdate %> -
@@ -56,19 +56,15 @@
 
 <h2>Education</h2>
 
-<h3>School 1</h3>
-
 <p>
-  <%= best_in_place @education.first, :program %> <br>
+  <strong><%= best_in_place @education.first, :program %></strong> <br>
   <%= best_in_place @education.first, :institution %> <br>
   <%= best_in_place @education.first, :startdate %> <br>
   <%= best_in_place @education.first, :enddate %>
 </p>
 
-<h3>School 2</h3>
-
 <p>
-  <%= best_in_place @education.second, :program %> <br>
+  <strong><%= best_in_place @education.second, :program %></strong> <br>
   <%= best_in_place @education.second, :institution %> <br>
   <%= best_in_place @education.second, :startdate %> <br>
   <%= best_in_place @education.second, :enddate %>

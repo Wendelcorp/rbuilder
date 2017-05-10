@@ -10,10 +10,11 @@ body {
   -webkit-box-shadow: 0px 10px 55px -5px rgba(0,0,0,0.42);
   -moz-box-shadow: 0px 10px 55px -5px rgba(0,0,0,0.42);
   box-shadow: 0px 10px 55px -5px rgba(0,0,0,0.42);
-  padding: 15px 50px;
+  padding: 50px 50px;
   margin-bottom: 50px;
   overflow: hidden;
   width: 100%;
+  border-radius: 5px;
 }
 
 h2 {
@@ -24,7 +25,7 @@ h2 {
 }
 
 h3 {
-  font-size: 0.8em;
+  font-size: 0.7em;
   color: dark-grey;
 }
 
@@ -35,4 +36,8 @@ h3 {
 .experience-container {
 
 
+}
+.main-content {
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
