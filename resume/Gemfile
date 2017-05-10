@@ -18,6 +18,9 @@ gem 'devise'
 gem 'best_in_place'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
+gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'bootstrap-sass'
+gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 group :development, :test do
   gem 'byebug', platform: :mri

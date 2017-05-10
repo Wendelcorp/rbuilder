@@ -3,6 +3,7 @@
 
 <div class="resume-canvas">
 
+
 <div class="profile-container">
 <p>
   <%= best_in_place @profile.first, :firstname %> <%= best_in_place @profile.first, :lastname %> <br>
@@ -14,40 +15,9 @@
 </p>
 </div>
 
-<div class="education-skills-container">
+<div class="row">
 
-<h2>Education</h2>
-
-<h3>School 1</h3>
-
-<p>
-  <%= best_in_place @education.first, :program %> <br>
-  <%= best_in_place @education.first, :institution %> <br>
-  <%= best_in_place @education.first, :startdate %> <br>
-  <%= best_in_place @education.first, :enddate %>
-</p>
-
-<h3>School 2</h3>
-
-<p>
-  <%= best_in_place @education.second, :program %> <br>
-  <%= best_in_place @education.second, :institution %> <br>
-  <%= best_in_place @education.second, :startdate %> <br>
-  <%= best_in_place @education.second, :enddate %>
-</p>
-
-<h2>Skills</h2>
-
-<p>
-  <%= best_in_place @skill.first, :name %> <br>
-  <%= best_in_place @skill.second, :name %> <br>
-  <%= best_in_place @skill.third, :name %>
-</p>
-
-
-</div>
-
-<div class="experience-container">
+<div class="experience-container col-md-8">
 
 <h2>Experience</h2>
 
@@ -80,7 +50,38 @@
   <%= best_in_place @experience.third, :startdate %> -
   <%= best_in_place @experience.third, :enddate %>
 </p>
-
 </div>
 
+<div class="education-skills-container col-md-4">
+
+<h2>Education</h2>
+
+<h3>School 1</h3>
+
+<p>
+  <%= best_in_place @education.first, :program %> <br>
+  <%= best_in_place @education.first, :institution %> <br>
+  <%= best_in_place @education.first, :startdate %> <br>
+  <%= best_in_place @education.first, :enddate %>
+</p>
+
+<h3>School 2</h3>
+
+<p>
+  <%= best_in_place @education.second, :program %> <br>
+  <%= best_in_place @education.second, :institution %> <br>
+  <%= best_in_place @education.second, :startdate %> <br>
+  <%= best_in_place @education.second, :enddate %>
+</p>
+
+<h2>Skills</h2>
+
+<p>
+  <%= best_in_place @skill.first, :name %> <br>
+  <%= best_in_place @skill.second, :name %> <br>
+  <%= best_in_place @skill.third, :name %>
+</p>
+
+
+</div>
 </div>

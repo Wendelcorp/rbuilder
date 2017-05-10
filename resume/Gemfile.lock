@@ -39,11 +39,19 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.1.4)
+    autoprefixer-rails (7.0.1)
+      execjs
     bcrypt (3.1.11)
     best_in_place (3.1.0)
       actionpack (>= 3.2)
       railties (>= 3.2)
     bindex (0.5.0)
+    bootstrap (4.0.0.alpha6)
+      autoprefixer-rails (>= 6.0.3)
+      sass (>= 3.4.19)
+    bootstrap-sass (3.3.7)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     builder (3.2.3)
     byebug (9.0.6)
     coffee-rails (4.2.1)
@@ -172,6 +180,8 @@ PLATFORMS
 
 DEPENDENCIES
   best_in_place
+  bootstrap (~> 4.0.0.alpha6)
+  bootstrap-sass
   byebug
   coffee-rails (~> 4.2)
   devise
@@ -183,6 +193,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
+  sprockets-rails
   sqlite3
   turbolinks (~> 5)
   tzinfo-data
