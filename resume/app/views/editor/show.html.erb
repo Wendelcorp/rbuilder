@@ -12,10 +12,10 @@
       <%= best_in_place @profile.first, :role %> <br>
       </div>
       <div class="col-md-6 text-right">
-      <%= best_in_place @profile.first, :phonenumber %> <br>
+      <!-- <%= best_in_place @profile.first, :phonenumber %> <br>
       <%= best_in_place @profile.first, :email %> <br>
-      <!-- <%= best_in_place @profile.first, :linkedin %> <br> -->
-      <!-- <%= best_in_place @profile.first, :website %> -->
+      <%= best_in_place @profile.first, :linkedin %> <br>
+      <%= best_in_place @profile.first, :website %> -->
       </div>
     </p>
   </div>
@@ -30,7 +30,9 @@
 <p>
   <strong><%= best_in_place @experience.first, :role %></strong> <br>
   <%= best_in_place @experience.first, :company %> <br>
-  <%= best_in_place @experience.first, :description %> <br>
+  <%= best_in_place @experience.first,
+    :description,
+    :type => :textarea %> <br>
   <%= best_in_place @experience.first, :startdate %> -
   <%= best_in_place @experience.first, :enddate %>
 </p>
@@ -59,14 +61,14 @@
 <p>
   <strong><%= best_in_place @education.first, :program %></strong> <br>
   <%= best_in_place @education.first, :institution %> <br>
-  <%= best_in_place @education.first, :startdate %> <br>
+  <%= best_in_place @education.first, :startdate %> -
   <%= best_in_place @education.first, :enddate %>
 </p>
 
 <p>
   <strong><%= best_in_place @education.second, :program %></strong> <br>
   <%= best_in_place @education.second, :institution %> <br>
-  <%= best_in_place @education.second, :startdate %> <br>
+  <%= best_in_place @education.second, :startdate %> -
   <%= best_in_place @education.second, :enddate %>
 </p>
 
@@ -80,4 +82,10 @@
 
 
 </div>
+</div>
+<div class="row">
+  <!-- <div>
+    <%= best_in_place @profile.first, :email %> <br>
+    <%= best_in_place @profile.first, :phonenumber %> <br>
+  </div> -->
 </div>
