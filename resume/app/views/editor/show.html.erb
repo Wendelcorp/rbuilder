@@ -1,9 +1,27 @@
 <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %> <br>
 <%= link_to 'Generate PDF', editor_show_path(@editor, :format => 'pdf'), target: '_blank' %> <br><br>
 
+<div class="full-wrapper">
+<div class="sidebar">
+  <div class="template-picker-header">
+    <h2>Templates</h2>
+  </div>
+  <div class="sidebar-toggle">x</div>
+  <div class="template-picker">
+    <div class="template-item"></div>
+    <div class="template-item"></div>
+    <div class="template-item"></div>
+    <div class="template-item"></div>
+    <div class="template-item"></div>
+    <div class="template-item"></div>
+    <div class="template-item"></div>
+    <div class="template-item"></div>
+    <div class="template-item"></div>
+    <div class="template-item"></div>
+    <div class="template-item"></div>
+  </div>
+</div>
 <div class="resume-canvas">
-
-
 <div class="profile-container">
   <div class="row">
     <p>
@@ -88,5 +106,6 @@
     <%= best_in_place @profile.first, :email %> <br>
     <%= best_in_place @profile.first, :phonenumber %> <br>
   </div>
+</div>
 </div>
 </div>

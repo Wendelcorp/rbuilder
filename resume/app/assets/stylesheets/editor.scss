@@ -3,7 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
+}
+.full-wrapper {
   max-width: 48em;
+    margin: auto;
 }
 .resume-canvas {
   background-color: white;
@@ -11,7 +14,7 @@ body {
   -moz-box-shadow: 0px 10px 55px -5px rgba(0,0,0,0.10);
   box-shadow: 0px 10px 55px -5px rgba(0,0,0,0.10);
   padding: 50px 50px;
-  margin-bottom: 50px;
+  margin-bottom: 0 auto;
   overflow: hidden;
   width: 100%;
   border-radius: 5px;
@@ -31,6 +34,55 @@ h3 {
 
 p {
   font-size: 0.8em;
+}
+
+.sidebar {
+  width: 250px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  background-color: white;
+  -webkit-box-shadow: 0px 10px 55px -5px rgba(0,0,0,0.10);
+  -moz-box-shadow: 0px 10px 55px -5px rgba(0,0,0,0.10);
+  box-shadow: 0px 10px 55px -5px rgba(0,0,0,0.10);
+  z-index: 100;
+  overflow: scroll;
+  text-align: center;
+}
+.sidebar-toggle {
+  position: fixed;
+  top: 15px;
+  right: 260px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-color: white;
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: bolder;
+  color: #d62fba;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 10px 55px -5px rgba(0,0,0,0.10);
+  -moz-box-shadow: 0px 10px 55px -5px rgba(0,0,0,0.10);
+  box-shadow: 0px 10px 55px -5px rgba(0,0,0,0.10);
+}
+.template-picker-header {
+  height: 60px;
+  width: 250px;
+  position: fixed;
+  line-height: 40px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+.template-picker {
+  margin-top: 90px;
+}
+.template-item {
+  width: 125px;
+  height: 160px;
+  margin:20px auto 10px auto;
+  background-color: #f9f9f9;
 }
 
 .education-skills-container {
