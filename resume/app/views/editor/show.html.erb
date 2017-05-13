@@ -1,7 +1,16 @@
-<%= link_to 'Sign out', destroy_user_session_path, :method => :delete %> <br>
-<%= link_to 'Generate PDF', editor_show_path(@editor, :format => 'pdf'), target: '_blank' %> <br><br>
-
 <div class="full-wrapper">
+
+<div class="toolbar">
+  <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %> |
+  <%= link_to 'Generate PDF', editor_show_path(@editor, :format => 'pdf'), target: '_blank' %> |
+  <span class="subscription-type">
+    Subscription: Pro
+  </span><br><br>
+  <div class="get-started text-center">
+    <h1>Click on some text to start editing</h1>
+  </div><br><br>
+</div>
+
 <div class="sidebar-wrapper">
   <div class="sidebar-toggle">x</div>
   <div class="sidebar">
