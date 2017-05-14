@@ -1,14 +1,22 @@
 <div class="full-wrapper">
 
 <div class="toolbar">
-  <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %> |
-  <%= link_to 'Generate PDF', editor_show_path(@editor, :format => 'pdf'), target: '_blank' %> |
-  <span class="subscription-type">
-    Subscription: Pro
-  </span><br><br>
-  <div class="get-started text-center">
+  <div class="row">
+    <div class="col-md-6 tools-left">
+    <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %> | <span class="subscription-type">
+        Subscription: Pro
+      </span>
+    </div>
+    <div class="col-md-6 text-right">
+    <div class="ui-button generate-button">
+    <%= link_to 'Generate PDF', editor_show_path(@editor, :format => 'pdf'), target: '_blank' %>
+    </div>
+  </div>
+  </div>
+  <br>
+  <!-- <div class="get-started text-center">
     <h1>Click on some text to start editing</h1>
-  </div><br><br>
+  </div><br><br> -->
 </div>
 
 <div class="sidebar-wrapper">

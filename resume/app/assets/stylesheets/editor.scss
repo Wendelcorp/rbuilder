@@ -6,7 +6,7 @@ body {
 }
 .full-wrapper {
   max-width: 48em;
-  margin: auto;
+  margin: 0 auto;
   transition: all .3s ease;
 }
 .resume-canvas {
@@ -20,7 +20,9 @@ body {
   width: 100%;
   border-radius: 5px;
 }
-
+h1 {
+  font-size: 1.5em;
+}
 h2 {
   font-size: 0.8em;
   color: #d62fba;
@@ -118,4 +120,23 @@ transition: box-shadow 0.3s ease-in-out;
   margin-top: 50px;
   padding-left: 15px;
   font-size: 0.8em;
+}
+.ui-button {
+    padding: 5px 17px;
+    background-color: #d62fba;
+    display: inline-block;
+    margin: 8px;
+    border-radius: 20px;
+  -webkit-box-shadow: 0px 10px 55px -5px rgba(0,0,0,0.20);
+  -moz-box-shadow: 0px 10px 55px -5px rgba(0,0,0,0.20);
+  box-shadow: 0px 10px 55px -5px rgba(0,0,0,0.20);
+}
+.ui-button a {
+  color: white;
+}
+.generate-button {
+  margin-bottom: 10px;
+}
+.tools-left {
+  line-height: 54px;
 }
