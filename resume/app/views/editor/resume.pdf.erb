@@ -1,90 +1,72 @@
-  <%= wicked_pdf_stylesheet_link_tag "sakura" -%>
-  <%= wicked_pdf_stylesheet_link_tag "editor" -%>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<%= wicked_pdf_stylesheet_link_tag 'sakura' %>
+<%= wicked_pdf_stylesheet_link_tag 'editor' %>
 
-  <div class="resume-canvas">
-  <div class="profile-container">
-    <div class="row">
-      <p>
-        <div class="col-md-6">
-        <strong><%= best_in_place @profile.first, :firstname %> <%= best_in_place @profile.first, :lastname %></strong> <br>
-        <%= best_in_place @profile.first, :role %> <br>
-        </div>
-        <div class="col-md-6 text-right">
-        <!-- <%= best_in_place @profile.first, :phonenumber %> <br>
-        <%= best_in_place @profile.first, :email %> <br>
-        <%= best_in_place @profile.first, :linkedin %> <br>
-        <%= best_in_place @profile.first, :website %> -->
-        </div>
-      </p>
-    </div>
+<div class="row main-content">
+
+<div class="experience-container col-md-8">
+
+<h2>Experience</h2>
+
+<p>
+  <strong><%= best_in_place @experience.first, :role %></strong> <br>
+  <%= best_in_place @experience.first, :company %> <br>
+  <%= best_in_place @experience.first, :description, :type => :textarea, :as => :textarea %> <br>
+  <%= best_in_place @experience.first, :startdate %> -
+  <%= best_in_place @experience.first, :enddate %>
+</p>
+
+<p>
+  <strong><%= best_in_place @experience.second, :role %></strong> <br>
+  <%= best_in_place @experience.second, :company %> <br>
+  <%= best_in_place @experience.second, :description, :type => :textarea, :as => :textarea %> <br>
+  <%= best_in_place @experience.second, :startdate %> -
+  <%= best_in_place @experience.second, :enddate %>
+</p>
+
+<p>
+  <strong><%= best_in_place @experience.third, :role %></strong> <br>
+  <%= best_in_place @experience.third, :company %> <br>
+  <%= best_in_place @experience.third, :description, :type => :textarea, :as => :textarea %> <br>
+  <%= best_in_place @experience.third, :startdate %> -
+  <%= best_in_place @experience.third, :enddate %>
+</p>
+</div>
+
+<div class="education-skills-container col-md-4">
+
+<h2>Education</h2>
+
+<p>
+  <strong><%= best_in_place @education.first, :program %></strong> <br>
+  <%= best_in_place @education.first, :institution %> <br>
+  <%= best_in_place @education.first, :startdate %> -
+  <%= best_in_place @education.first, :enddate %>
+</p>
+
+<p>
+  <strong><%= best_in_place @education.second, :program %></strong> <br>
+  <%= best_in_place @education.second, :institution %> <br>
+  <%= best_in_place @education.second, :startdate %> -
+  <%= best_in_place @education.second, :enddate %>
+</p>
+
+<h2>Skills</h2>
+
+<p>
+  <%= best_in_place @skill.first, :name %> <br>
+  <%= best_in_place @skill.second, :name %> <br>
+  <%= best_in_place @skill.third, :name %>
+</p>
+
+
+</div>
+
+</div>
+
+<div class="row contact-details">
+  <div>
+    <%= best_in_place @profile.first, :email %> <br>
+    <%= best_in_place @profile.first, :phonenumber %> <br>
   </div>
-
-  <div class="row main-content">
-
-  <div class="experience-container col-md-8">
-
-  <h2>Experience</h2>
-
-  <p>
-    <strong><%= best_in_place @experience.first, :role %></strong> <br>
-    <%= best_in_place @experience.first, :company %> <br>
-    <%= best_in_place @experience.first, :description, :type => :textarea, :as => :textarea %> <br>
-    <%= best_in_place @experience.first, :startdate %> -
-    <%= best_in_place @experience.first, :enddate %>
-  </p>
-
-  <p>
-    <strong><%= best_in_place @experience.second, :role %></strong> <br>
-    <%= best_in_place @experience.second, :company %> <br>
-    <%= best_in_place @experience.second, :description, :type => :textarea, :as => :textarea %> <br>
-    <%= best_in_place @experience.second, :startdate %> -
-    <%= best_in_place @experience.second, :enddate %>
-  </p>
-
-  <p>
-    <strong><%= best_in_place @experience.third, :role %></strong> <br>
-    <%= best_in_place @experience.third, :company %> <br>
-    <%= best_in_place @experience.third, :description, :type => :textarea, :as => :textarea %> <br>
-    <%= best_in_place @experience.third, :startdate %> -
-    <%= best_in_place @experience.third, :enddate %>
-  </p>
-  </div>
-
-  <div class="education-skills-container col-md-4">
-
-  <h2>Education</h2>
-
-  <p>
-    <strong><%= best_in_place @education.first, :program %></strong> <br>
-    <%= best_in_place @education.first, :institution %> <br>
-    <%= best_in_place @education.first, :startdate %> -
-    <%= best_in_place @education.first, :enddate %>
-  </p>
-
-  <p>
-    <strong><%= best_in_place @education.second, :program %></strong> <br>
-    <%= best_in_place @education.second, :institution %> <br>
-    <%= best_in_place @education.second, :startdate %> -
-    <%= best_in_place @education.second, :enddate %>
-  </p>
-
-  <h2>Skills</h2>
-
-  <p>
-    <%= best_in_place @skill.first, :name %> <br>
-    <%= best_in_place @skill.second, :name %> <br>
-    <%= best_in_place @skill.third, :name %>
-  </p>
-
-
-  </div>
-
-  </div>
-
-  <div class="row contact-details">
-    <div>
-      <%= best_in_place @profile.first, :email %> <br>
-      <%= best_in_place @profile.first, :phonenumber %> <br>
-    </div>
-  </div>
-  </div>
+</div>
