@@ -80,6 +80,10 @@ margin: 40px auto 0;
   margin-bottom: 80px;
 }
 
+.section-header-text {
+  font-size: 18px;
+}
+
 .feature {
   height: 300px;
   padding-left: 340px!important;
@@ -91,6 +95,26 @@ margin: 40px auto 0;
   padding-left: 100px;
 }
 
+.footer {
+
+}
+.footer-logo {
+  text-align: center;
+  margin-top: 140px;
+}
+
+.footer-nav-list {
+  list-style: none;
+  text-align: center;
+  padding-right: 40px;
+  margin-top: 30px;
+}
+
+.footer-nav-item {
+  display: inline-block;
+  margin: 10px;
+  color: #4990E2;
+}
 
 @media (max-width:767px) {
   .nav-list {
