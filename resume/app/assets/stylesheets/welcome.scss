@@ -1,3 +1,100 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h2 {
+  font-size: 24px;
+}
+
+.width-control {
+  max-width: 1300px;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.top-logo {
+  margin-left: 30px;
+}
+
+.hero {
+  height: 400px;
+  padding-top: 130px;
+  position: relative;
+}
+
+.sign-up-button {
+  /* Rectangle: */
+background: #4990E2;
+border-radius: 8px;
+width: 150px;
+height: 40px;
+line-height: 40px;
+text-align: center;
+color: white;
+font-weight: lighter;
+display: block;
+margin: 40px auto 0;
+}
+
+.nav-list {
+  list-style: none;
+  text-align: right;
+  padding-right: 40px;
+}
+
+.nav-item {
+  display: inline-block;
+  margin: 10px;
+  color: #4990E2;
+}
+
+.nav-right {
+
+}
+
+.shapes-left {
+  position: absolute;
+  left: 10px;
+  z-index: 10;
+}
+.shapes-right {
+  position: absolute;
+  right: 10px;
+}
+
+.resume-sample {
+  /* Rectangle 2: */
+  max-width: 950px;
+  height: 1200px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  box-shadow: 0 5px 26px 1px rgba(0,0,0,0.14);
+  border-radius: 8px;
+}
+
+.features-section {
+  margin-top: 120px;
+}
+
+.section-header {
+  margin-bottom: 80px;
+}
+
+.feature {
+  height: 300px;
+  padding-left: 340px!important;
+  padding-right: 60px!important;
+  padding-top: 80px!important;
+}
+
+.feature-graphic {
+  padding-left: 100px;
+}
+
+
+@media (max-width:767px) {
+  .nav-list {
+    text-align: center;
+    padding-right: 0;
+  }
+}
