@@ -1,29 +1,51 @@
-<h2>Sign up</h2>
+<div class="sign-up text-center">
+  <div class="spacer"></div>
+  <div class="spacer"></div>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+  <div class="form-logo">
+    <svg width="132px" height="48px" viewBox="0 0 132 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+      <desc>Created with Sketch.</desc>
+      <defs></defs>
+      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g id="Desktop-HD" transform="translate(-265.000000, -26.000000)">
+              <text id="Sheet.-Copy-2" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="24" font-weight="bold" letter-spacing="0.676190019" fill="#3F3F3F">
+                  <tspan x="322" y="57">Sheet.</tspan>
+              </text>
+              <rect id="Rectangle-3-Copy-6" fill-opacity="0.569999993" fill="#50E3C2" x="265" y="34" width="29.6142372" height="39.3365854" rx="4"></rect>
+              <rect id="Rectangle-3-Copy-7" stroke="#DA77EE" stroke-width="3" x="274.5" y="27.5" width="26.6142372" height="36.3365854" rx="4"></rect>
+          </g>
+      </g>
+    </svg>
   </div>
+  <!-- <h2>Sign up</h2> -->
+  <div class="spacer"></div>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
+    <div class="field">
+      <%= f.label :password %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "off" %>
+    </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+    <div class="field">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    </div>
 
-<%= render "devise/shared/links" %>
+    <div class="actions">
+      <%= f.submit "Sign up" %>
+    </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+
+</div>
