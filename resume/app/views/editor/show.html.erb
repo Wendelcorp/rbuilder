@@ -83,6 +83,10 @@
       <%= best_in_place @profile.first, :linkedin %> <br>
       <%= best_in_place @profile.first, :website %> -->
       </div>
+      <div class="col-md-12">
+        <h2>Bio</h2>
+        <%= best_in_place @profile.first, :bio, :type => :textarea, :as => :textarea %> <br>
+      </div>
     </p>
   </div>
 </div>

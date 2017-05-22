@@ -29,7 +29,7 @@ class ProfilesController < ApplicationController
     @profile = current_user.profiles.find(params[:id])
 
     respond_to do |format|
-      if @profile.update_attributes(params[:profile].permit(:firstname, :lastname, :role, :phonenumber, :email, :linkedin, :website))
+      if @profile.update_attributes(params[:profile].permit(:firstname, :lastname, :role, :phonenumber, :email, :linkedin, :website, :bio))
         format.html { redirect_to(@profile, :notice => 'Updated :)') }
         format.json { respond_with_bip(@profile) }
       else
@@ -45,7 +45,7 @@ class ProfilesController < ApplicationController
   private
 
   def profile_params
-    params.require(:profile).permit(:firstname, :lastname, :role, :phonenumber, :email, :linkedin, :website)
+    params.require(:profile).permit(:firstname, :lastname, :role, :phonenumber, :email, :linkedin, :website, :bio)
   end
 
 end
