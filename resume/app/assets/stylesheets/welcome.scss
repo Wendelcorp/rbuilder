@@ -86,13 +86,16 @@ margin: 40px auto 0;
 
 .feature {
   height: 300px;
-  padding-left: 340px!important;
-  padding-right: 60px!important;
-  padding-top: 80px!important;
 }
 
 .feature-graphic {
   padding-left: 100px;
+}
+.feature-text-container {
+  width: 300px;
+  position: absolute;
+  right: 25px;
+  top: 75px;
 }
 
 .footer {
