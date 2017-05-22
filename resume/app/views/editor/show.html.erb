@@ -18,35 +18,20 @@
         </svg>
       </div>
     </div>
-    <div class="col-md-8 nav-right text-right">
+    <div class="col-md-8 nav-right text-right nav-right-editor">
       <ul class="nav-list">
-        <li class="nav-item">Features</li>
-        <li class="nav-item">Pricing</li>
-        <li class="nav-item">About</li>
-        <li class="nav-item">Blog</li>
+        <li class="nav-item">Upgrade</li>
+        <li class="nav-item">  <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
+        <li class="nav-item editor-nav-last"><%= link_to 'Generate PDF', editor_show_path(@editor, :format => 'pdf'), target: '_blank' %></li>
+        <li><a href="#"><img src="https://randomuser.me/api/portraits/women/79.jpg" alt="" class="profile-image"></a></li>
       </ul>
     </div>
   </div>
 
 
-<div class="toolbar">
-  <div class="row">
-    <div class="col-md-6 tools-left">
-    <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %> | <span class="subscription-type">
-        Subscription: Pro
-      </span>
-    </div>
-    <div class="col-md-6 text-right">
-    <div class="ui-button generate-button">
-    <%= link_to 'Generate PDF', editor_show_path(@editor, :format => 'pdf'), target: '_blank' %>
-    </div>
-  </div>
-  </div>
+<!-- <div class="toolbar">
   <br>
-  <!-- <div class="get-started text-center">
-    <h1>Click on some text to start editing</h1>
-  </div><br><br> -->
-</div>
+</div> -->
 
 <div class="sidebar-wrapper">
   <div class="sidebar-toggle">x</div>

@@ -17,8 +17,9 @@ body {
   padding: 50px 50px;
   margin-bottom: 0 auto;
   overflow: hidden;
-  width: 100%;
+  max-width: 900px;
   border-radius: 5px;
+  margin: 50px auto;
 }
 h1 {
   font-size: 1.5em;
@@ -139,4 +140,24 @@ transition: box-shadow 0.3s ease-in-out;
 }
 .tools-left {
   line-height: 54px;
+}
+
+.profile-image {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 10px 55px -5px rgba(0,0,0,0.20);
+  -moz-box-shadow: 0px 10px 55px -5px rgba(0,0,0,0.20);
+  box-shadow: 0px 10px 55px -5px rgba(0,0,0,0.20);
+  position: absolute;
+  top: 0px;
+  right: 65px;
+}
+
+.editor-nav-last {
+  padding-right: 90px;
+}
+
+.nav-right-editor {
+  position: relative;
 }
