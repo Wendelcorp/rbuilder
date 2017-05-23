@@ -22,6 +22,12 @@ h2 {
   position: relative;
 }
 
+.big-tag {
+  font-size: 2em;
+}
+.big-sub {
+  font-size: 1.2em;
+}
 .sign-up-button {
   /* Rectangle: */
 background: #4990E2;
@@ -96,6 +102,10 @@ margin: 40px auto 0;
   position: absolute;
   right: 25px;
   top: 75px;
+}
+.big-quote {
+  font-size: 1.4em;
+  padding: 40px 15%;
 }
 
 .footer {

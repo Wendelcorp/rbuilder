@@ -39,6 +39,10 @@ class ProfilesController < ApplicationController
     end
   end
 
+  def my_profile
+    
+  end
+
   def destroy
   end
 
