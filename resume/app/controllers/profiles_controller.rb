@@ -2,12 +2,12 @@ class ProfilesController < ApplicationController
   before_action :authenticate_user!
 
   def show
-    @profile = Profile.find(params[:id])
-    unless session[:user_id] == @profile.user_id
-      flash[:notice] = "Oops! That's someone elses page."
-      redirect_to editor_show_path(session[:user_id])
-      return
-    end
+    @profile = current_user.profiles
+    # unless session[:user_id] == @profile.user_id
+    #   flash[:notice] = "Oops! That's someone elses page."
+    #   redirect_to editor_show_path(session[:user_id])
+    #   return
+    # end
   end
 
   def new
@@ -37,10 +37,6 @@ class ProfilesController < ApplicationController
         format.json { respond_with_bip(@profile) }
       end
     end
-  end
-
-  def my_profile
-    
   end
 
   def destroy

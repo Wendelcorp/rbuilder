@@ -1,4 +1,5 @@
 <div class="width-control">
+
   <div class="row nav">
     <div class="col-md-4">
       <div class="top-logo">
@@ -22,128 +23,109 @@
       <ul class="nav-list">
         <li class="nav-item">Upgrade</li>
         <li class="nav-item">  <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
+        <li class="nav-item">  <%= link_to 'My Profile', controller: "profiles", action: "show" %></li>
         <li class="nav-item editor-nav-last"><%= link_to 'Generate PDF', editor_show_path(@editor, :format => 'pdf'), target: '_blank' %></li>
-        <li><a href="#"><img src="https://randomuser.me/api/portraits/women/79.jpg" alt="" class="profile-image"></a></li>
+        <li><%= link_to image_tag("https://randomuser.me/api/portraits/women/79.jpg", class: 'profile-image'), controller: "profiles", action: "show" %></li>
       </ul>
     </div>
   </div>
 
-
-<!-- <div class="toolbar">
-  <br>
-</div> -->
-
-<div class="sidebar-wrapper">
-  <div class="sidebar-toggle">x</div>
-  <div class="sidebar">
-    <div class="template-picker-header">
-      <h2>Templates</h2>
-    </div>
-    <div class="template-picker">
-      <div class="template-item"></div>
-      <div class="template-item"></div>
-      <div class="template-item"></div>
-      <div class="template-item"></div>
-      <div class="template-item"></div>
-      <div class="template-item"></div>
-      <div class="template-item"></div>
-      <div class="template-item"></div>
-      <div class="template-item"></div>
-      <div class="template-item"></div>
-      <div class="template-item"></div>
+  <div class="sidebar-wrapper">
+    <div class="sidebar-toggle">x</div>
+    <div class="sidebar">
+      <div class="template-picker-header">
+        <h2>Templates</h2>
+      </div>
+      <div class="template-picker">
+        <div class="template-item"></div>
+        <div class="template-item"></div>
+        <div class="template-item"></div>
+        <div class="template-item"></div>
+        <div class="template-item"></div>
+        <div class="template-item"></div>
+        <div class="template-item"></div>
+        <div class="template-item"></div>
+        <div class="template-item"></div>
+        <div class="template-item"></div>
+        <div class="template-item"></div>
+      </div>
     </div>
   </div>
-</div>
-<div class="resume-canvas">
-<div class="profile-container">
-  <div class="row">
-    <p>
-      <div class="col-md-6">
-      <strong><%= best_in_place @profile.first, :firstname %> <%= best_in_place @profile.first, :lastname %></strong> <br>
-      <%= best_in_place @profile.first, :role %> <br>
+
+  <div class="resume-canvas">
+    <div class="profile-container">
+      <div class="row">
+        <p>
+          <div class="col-md-6">
+          <strong><%= best_in_place @profile.first, :firstname %> <%= best_in_place @profile.first, :lastname %></strong> <br>
+          <%= best_in_place @profile.first, :role %> <br>
+          </div>
+          <div class="col-md-6 text-right">
+          <!-- <%= best_in_place @profile.first, :phonenumber %> <br>
+          <%= best_in_place @profile.first, :email %> <br>
+          <%= best_in_place @profile.first, :linkedin %> <br>
+          <%= best_in_place @profile.first, :website %> -->
+          </div>
+          <div class="col-md-12">
+            <h2>Bio</h2>
+            <%= best_in_place @profile.first, :bio, :type => :textarea, :as => :textarea %> <br>
+          </div>
+        </p>
       </div>
-      <div class="col-md-6 text-right">
-      <!-- <%= best_in_place @profile.first, :phonenumber %> <br>
-      <%= best_in_place @profile.first, :email %> <br>
-      <%= best_in_place @profile.first, :linkedin %> <br>
-      <%= best_in_place @profile.first, :website %> -->
+    </div>
+    <div class="row main-content">
+      <div class="experience-container col-md-8">
+        <h2>Experience</h2>
+        <p>
+          <strong><%= best_in_place @experience.first, :role %></strong> <br>
+          <%= best_in_place @experience.first, :company %> <br>
+          <%= best_in_place @experience.first, :description, :type => :textarea, :as => :textarea %> <br>
+          <%= best_in_place @experience.first, :startdate %> -
+          <%= best_in_place @experience.first, :enddate %>
+        </p>
+        <p>
+          <strong><%= best_in_place @experience.second, :role %></strong> <br>
+          <%= best_in_place @experience.second, :company %> <br>
+          <%= best_in_place @experience.second, :description, :type => :textarea, :as => :textarea %> <br>
+          <%= best_in_place @experience.second, :startdate %> -
+          <%= best_in_place @experience.second, :enddate %>
+        </p>
+        <p>
+          <strong><%= best_in_place @experience.third, :role %></strong> <br>
+          <%= best_in_place @experience.third, :company %> <br>
+          <%= best_in_place @experience.third, :description, :type => :textarea, :as => :textarea %> <br>
+          <%= best_in_place @experience.third, :startdate %> -
+          <%= best_in_place @experience.third, :enddate %>
+        </p>
       </div>
-      <div class="col-md-12">
-        <h2>Bio</h2>
-        <%= best_in_place @profile.first, :bio, :type => :textarea, :as => :textarea %> <br>
+      <div class="education-skills-container col-md-4">
+        <h2>Education</h2>
+        <p>
+          <strong><%= best_in_place @education.first, :program %></strong> <br>
+          <%= best_in_place @education.first, :institution %> <br>
+          <%= best_in_place @education.first, :startdate %> -
+          <%= best_in_place @education.first, :enddate %>
+        </p>
+        <p>
+          <strong><%= best_in_place @education.second, :program %></strong> <br>
+          <%= best_in_place @education.second, :institution %> <br>
+          <%= best_in_place @education.second, :startdate %> -
+          <%= best_in_place @education.second, :enddate %>
+        </p>
+        <h2>Skills</h2>
+        <p>
+          <%= best_in_place @skill.first, :name %> <br>
+          <%= best_in_place @skill.second, :name %> <br>
+          <%= best_in_place @skill.third, :name %>
+        </p>
       </div>
-    </p>
+    </div>
+    <div class="row contact-details">
+      <div>
+        <%= best_in_place @profile.first, :email %> <br>
+        <%= best_in_place @profile.first, :phonenumber %> <br>
+      </div>
+    </div>
   </div>
+  
 </div>
-
-<div class="row main-content">
-
-<div class="experience-container col-md-8">
-
-<h2>Experience</h2>
-
-<p>
-  <strong><%= best_in_place @experience.first, :role %></strong> <br>
-  <%= best_in_place @experience.first, :company %> <br>
-  <%= best_in_place @experience.first, :description, :type => :textarea, :as => :textarea %> <br>
-  <%= best_in_place @experience.first, :startdate %> -
-  <%= best_in_place @experience.first, :enddate %>
-</p>
-
-<p>
-  <strong><%= best_in_place @experience.second, :role %></strong> <br>
-  <%= best_in_place @experience.second, :company %> <br>
-  <%= best_in_place @experience.second, :description, :type => :textarea, :as => :textarea %> <br>
-  <%= best_in_place @experience.second, :startdate %> -
-  <%= best_in_place @experience.second, :enddate %>
-</p>
-
-<p>
-  <strong><%= best_in_place @experience.third, :role %></strong> <br>
-  <%= best_in_place @experience.third, :company %> <br>
-  <%= best_in_place @experience.third, :description, :type => :textarea, :as => :textarea %> <br>
-  <%= best_in_place @experience.third, :startdate %> -
-  <%= best_in_place @experience.third, :enddate %>
-</p>
-</div>
-
-<div class="education-skills-container col-md-4">
-
-<h2>Education</h2>
-
-<p>
-  <strong><%= best_in_place @education.first, :program %></strong> <br>
-  <%= best_in_place @education.first, :institution %> <br>
-  <%= best_in_place @education.first, :startdate %> -
-  <%= best_in_place @education.first, :enddate %>
-</p>
-
-<p>
-  <strong><%= best_in_place @education.second, :program %></strong> <br>
-  <%= best_in_place @education.second, :institution %> <br>
-  <%= best_in_place @education.second, :startdate %> -
-  <%= best_in_place @education.second, :enddate %>
-</p>
-
-<h2>Skills</h2>
-
-<p>
-  <%= best_in_place @skill.first, :name %> <br>
-  <%= best_in_place @skill.second, :name %> <br>
-  <%= best_in_place @skill.third, :name %>
-</p>
-
-
-</div>
-
-</div>
-
-<div class="row contact-details">
-  <div>
-    <%= best_in_place @profile.first, :email %> <br>
-    <%= best_in_place @profile.first, :phonenumber %> <br>
-  </div>
-</div>
-</div>
-</div>
-  </div>

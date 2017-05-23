@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 
   get 'welcome/index'
   get 'editor/show'
+  get 'profiles/show'
 
   authenticated :user do
 	  root "editor#show", as: "authenticated_root"
